@@ -1,7 +1,7 @@
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const Course = require('../models/Course');
-const Bootcamp = require('../models/Bootcamps');
+const Bootcamp = require('../models/Bootcamp');
 
 // @desc Get Couses
 // @route GET /api/v1/courses
@@ -20,7 +20,6 @@ exports.getCourses = asyncHandler(async (req, res, next) => {
     } else {
        res.status(200).json(res.advancedResults);
     }
-
 })
 
 // @desc Get a single couse
